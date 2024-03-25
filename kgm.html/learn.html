@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Registration Form</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="js" href="app.js">
+</head>
+<body style="background:url(pics/bggg.webp);">
+  <nav class="nav">
+    <a href="file:///C:/Users/ELCOT/Private/Desktop/kgm.html/log.html#">Home</a>
+    <a href="file:///C:/Users/ELCOT/Private/Desktop/kgm.html/about.html">About</a>
+    <a href="file:///C:/Users/ELCOT/Private/Desktop/kgm.html/help.html">Help?</a>
+    
+</nav>
+  <div class="form-container">
+    <div class="form-toggle">
+      <button id="login-toggle">Login</button>
+      <button id="register-toggle">Register</button>
+    </div>
+    <form id="login-form" class="form">
+      <h2>Login</h2>
+      <div class="form-group">
+        <label for="login-username">Username:</label>
+        <input type="text" id="login-username" name="login-username" required>
+      </div>
+      <div class="form-group">
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" name="login-password" required>
+      </div>
+      <center>
+        <a href="file:///C:/Users/ELCOT/Private/Desktop/kgm.html/log.html " type="submit">Login</a>
+      </center></form>
+    <form id="register-form" class="form" style="display: none;">
+      <h2>Register</h2>
+      <div class="form-group">
+        <label for="register-username">Username:</label>
+        <input type="text" id="register-username" name="register-username" required>
+      </div>
+      <div class="form-group">
+        <label for="register-email">Email:</label>
+        <input type="email" id="register-email" name="register-email" required>
+      </div>
+      <div class="form-group">
+        <label for="register-password">Password:</label>
+        <input type="password" id="register-password" name="register-password" required>
+      </div>
+      <button  type="submit">Register</button>
+    </form>
+  </div>
+
+
+
+  <script src="script.js">
+  document.getElementById('register-toggle').addEventListener('click', function() {
+    document.getElementById('register-form').style.display = 'block';
+    document.getElementById('login-form').style.display = 'none';
+  });
+  
+  document.getElementById('login-toggle').addEventListener('click', function() {
+    document.getElementById('login-form').style.display = 'block';
+    document.getElementById('register-form').style.display = 'none';
+  });
+  </script>
+
+
+
+</body>
+</html>
+<style>.nav a{
+  position: relative;
+  font-size: 1.1em;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+  right: 0;
+
+}
+
+.nav a::after{
+  content: '';
+  position:absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: rgb(241, 10, 10);
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform.5s;
+}
+.nav a:hover:after{
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+
+</style>
